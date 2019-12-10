@@ -1,0 +1,9 @@
+测试测试
+
+修改.  
+
+.git-credentials 文件。添加内容。https://m15811024346@163.com:Wangshuai1@github.com
+
+
+
+为了省的每次push都需要输入密码。
