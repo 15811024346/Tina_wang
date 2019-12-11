@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+//noinspection GoUnresolvedReference
+import (
+	"waibu"
+	"fmt"
+)
 
 //类型断言
 //类型断言是为了了解空接口中接收的值是什么类型。。
@@ -28,8 +32,14 @@ func assign2(a interface{}){
 }
 
 func main(){
-	assign("哈哈哈" )
-	assign2("嘿嘿嘿")
-	assign2(true)
-	assign2(1111)
+	//assign("哈哈哈" )
+	//assign2("嘿嘿嘿")
+	//assign2(true)
+	//assign2(1111)
+
+
+	//调用waibu那个包里的Add方法进行计算
+	r :=waibu.Add(10,20)
+	fmt.Println(r)
+
 }
