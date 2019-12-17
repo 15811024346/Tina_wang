@@ -1,0 +1,8 @@
+[2019-12-17 16:04:14] [INFO] [main.main--main.go--15] 这是一条info日志
+[2019-12-17 16:04:14] [WARNING] [main.main--main.go--18] 这是一条warning日志 ，id:100000 name:理想
+
+[2019-12-17 16:04:14] [ERROR] [main.main--main.go--19] 这是一条erroo日志
+[2019-12-17 16:04:16] [INFO] [main.main--main.go--15] 这是一条info日志
+[2019-12-17 16:04:16] [WARNING] [main.main--main.go--18] 这是一条warning日志 ，id:100000 name:理想
+
+[2019-12-17 16:04:16] [ERROR] [main.main--main.go--19] 这是一条erroo日志

@@ -4,54 +4,47 @@ import (
 	"fmt"
 	"time"
 )
+
 //定义一个unit16类型的logleve级别
 
 //创建一个log类
-type Logger struct {
+type ConsloeLogger struct {
 	Level LogLevel
 }
 
 //Newlog 是Logger的方法
-func Newlog(levelstr string) Logger {
-	level,err := parseLoglevel(levelstr)
-	if err!= nil{
+func Newlog(levelstr string) ConsloeLogger {
+	level, err := parseLoglevel(levelstr)
+	if err != nil {
 		panic(err)
 	}
-	return Logger{
-		Level:level,
+	return ConsloeLogger{
+		Level: level,
 	}
 }
-func (l Logger) unable(loglevel LogLevel) bool{
-	return  loglevel >= l.Level
+func (c ConsloeLogger) unable(loglevel LogLevel) bool {
+	return loglevel >= c.Level
 }
-func log(lv LogLevel,msg string){
-	now := time.Now()
-	fileName , funcNmae,linnb := getInfo(3)
-	fmt.Printf("[%s] [%s] [%s--%s--%d] %s\n",now.Format("2006-01-02 15:04:05"),getLogString(lv),fileName,funcNmae,linnb,msg)
-}
-func (l Logger) Debug(msg string) {
-	if l.unable(DEBUG){
-		log(DEBUG,msg)
-	}
-
-}
-func (l Logger) Info(msg string) {
-	if l.unable(INFO){
-		log(INFO,msg)
+func (c ConsloeLogger) log(lv LogLevel, format string, a ...interface{}) {
+	if c.unable(lv) {
+		msg := fmt.Sprintf(format, a...)
+		now := time.Now()
+		fileName, funcNmae, linnb := getInfo(3)
+		fmt.Printf("[%s] [%s] [%s--%s--%d] %s\n", now.Format("2006-01-02 15:04:05"), getLogString(lv), fileName, funcNmae, linnb, msg)
 	}
 }
-func (l Logger) Warning(msg string) {
-	if l.unable(WARNING){
-		log(WARNING,msg)
-	}
+func (c ConsloeLogger) Debug(format string, a ...interface{}) {
+	c.log(DEBUG, format, a...)
 }
-func (l Logger) Error(msg string) {
-	if l.unable(ERROR){
-		log(ERROR,msg)
-	}
+func (c ConsloeLogger) Info(format string, a ...interface{}) {
+	c.log(INFO, format, a...)
 }
-func (l Logger) fatal(msg string) {
-	if l.unable(FATAL){
-		log(FATAL,msg)
-	}
+func (c ConsloeLogger) Warning(format string, a ...interface{}) {
+	c.log(WARNING, format, a...)
+}
+func (c ConsloeLogger) Error(format string, a ...interface{}) {
+	c.log(ERROR, format, a...)
+}
+func (c ConsloeLogger) fatal(format string, a ...interface{}) {
+	c.log(FATAL, format, a...)
 }

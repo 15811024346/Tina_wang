@@ -10,7 +10,7 @@ import (
 
 type LogLevel uint16
 
-const(
+const (
 	UNKONWN LogLevel = iota
 	DEBUG
 	TRACE
@@ -19,27 +19,28 @@ const(
 	ERROR
 	FATAL
 )
-func parseLoglevel(s string)(LogLevel,error){
+
+func parseLoglevel(s string) (LogLevel, error) {
 	s = strings.ToLower(s)
 	switch s {
 	case "debug":
-		return DEBUG,nil
+		return DEBUG, nil
 	case "trace":
-		return TRACE,nil
+		return TRACE, nil
 	case "info":
-		return INFO,nil
+		return INFO, nil
 	case "warning":
-		return WARNING,nil
+		return WARNING, nil
 	case "error":
-		return ERROR,nil
+		return ERROR, nil
 	case "fatal":
-		return FATAL,nil
+		return FATAL, nil
 	default:
 		err := errors.New("无效的日志级别")
-		return UNKONWN,err
+		return UNKONWN, err
 	}
 }
-func getLogString(lv LogLevel)string{
+func getLogString(lv LogLevel) string {
 	switch lv {
 	case TRACE:
 		return "TRACE"
@@ -56,9 +57,9 @@ func getLogString(lv LogLevel)string{
 	}
 	return "UNKONWN"
 }
-func getInfo(n int)(funcName,fileName string ,linnb int){
-	pc,file,linnb,ok:=runtime.Caller(n)
-	if !ok{
+func getInfo(n int) (funcName, fileName string, linnb int) {
+	pc, file, linnb, ok := runtime.Caller(n)
+	if !ok {
 		fmt.Printf("runtime.caller() failed \n")
 		return
 	}
