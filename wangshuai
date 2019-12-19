@@ -1,8 +1,20 @@
-[2019-12-17 16:04:14] [INFO] [main.main--main.go--15] 这是一条info日志
-[2019-12-17 16:04:14] [WARNING] [main.main--main.go--18] 这是一条warning日志 ，id:100000 name:理想
+[2019-12-18 10:41:17] [INFO] [main.main--main.go--16] 这是一条info日志
+[2019-12-18 10:41:17] [WARNING] [main.main--main.go--19] 这是一条warning日志 ，id:100000 name:理想
 
-[2019-12-17 16:04:14] [ERROR] [main.main--main.go--19] 这是一条erroo日志
-[2019-12-17 16:04:16] [INFO] [main.main--main.go--15] 这是一条info日志
-[2019-12-17 16:04:16] [WARNING] [main.main--main.go--18] 这是一条warning日志 ，id:100000 name:理想
+[2019-12-18 10:41:17] [ERROR] [main.main--main.go--20] 这是一条erroo日志
+[2019-12-18 10:41:18] [INFO] [main.main--main.go--16] 这是一条info日志
+[2019-12-18 10:41:18] [WARNING] [main.main--main.go--19] 这是一条warning日志 ，id:100000 name:理想
 
-[2019-12-17 16:04:16] [ERROR] [main.main--main.go--19] 这是一条erroo日志
+[2019-12-18 10:41:18] [ERROR] [main.main--main.go--20] 这是一条erroo日志
+[2019-12-18 10:41:19] [INFO] [main.main--main.go--16] 这是一条info日志
+[2019-12-18 10:41:19] [WARNING] [main.main--main.go--19] 这是一条warning日志 ，id:100000 name:理想
+
+[2019-12-18 10:41:19] [ERROR] [main.main--main.go--20] 这是一条erroo日志
+[2019-12-18 10:41:20] [INFO] [main.main--main.go--16] 这是一条info日志
+[2019-12-18 10:41:20] [WARNING] [main.main--main.go--19] 这是一条warning日志 ，id:100000 name:理想
+
+[2019-12-18 10:41:20] [ERROR] [main.main--main.go--20] 这是一条erroo日志
+[2019-12-18 10:41:21] [INFO] [main.main--main.go--16] 这是一条info日志
+[2019-12-18 10:41:21] [WARNING] [main.main--main.go--19] 这是一条warning日志 ，id:100000 name:理想
+
+[2019-12-18 10:41:21] [ERROR] [main.main--main.go--20] 这是一条erroo日志
