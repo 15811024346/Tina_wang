@@ -12,7 +12,7 @@ func Split_Str1(str string, rep string) []string {
 	index := strings.Index(str, rep)
 	for index >= 0 {
 		str1 = append(str1, str[:index])
-		str = str[index+1:]
+		str = str[index+len(rep):]
 		index = strings.Index(str, rep)
 	}
 	str1 = append(str1, str)

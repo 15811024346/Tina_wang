@@ -13,5 +13,8 @@ func main() {
 		return
 	}
 	fmt.Println("链接成功")
-	db_function1.QueryRow()
+	//db_function1.QueryRow()
+	//多条查询。
+	db_function1.QueryMore(1)
+
 }

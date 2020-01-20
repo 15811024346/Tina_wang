@@ -36,3 +36,20 @@ func QueryRow() {
 	fmt.Printf("sqlobj%#v\n", u1)
 
 }
+func QueryMore(n int) {
+	sqlStr := `select id,name,age from user where id >?;`
+	rows, err := db.Query(sqlStr, n)
+	if err != nil {
+		return
+	}
+	defer rows.Close()
+	for rows.Next() {
+		var u1 User22
+		err := rows.Scan(&u1.id, &u1.name, &u1.age)
+		if err != nil {
+			fmt.Printf("scan failed err :%v\n", err)
+		}
+		fmt.Printf("u1:%#v\n", u1)
+	}
+
+}
